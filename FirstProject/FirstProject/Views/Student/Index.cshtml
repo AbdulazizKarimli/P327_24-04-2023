@@ -1,0 +1,28 @@
+﻿@using FirstProject.Models
+@model List<Student>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <h1>P327 Student page</h1>
+
+    <ul>
+        @*@foreach (Student student in (List<Student>)@TempData["Students"])
+        {
+            <li>@student.Id - @student.Name - @student.Age</li>
+        }*@
+        @foreach (Student student in Model)
+        {
+            <li>@student.Id - @student.Name - @student.Age</li>
+        }
+    </ul>
+</body>
+</html>
